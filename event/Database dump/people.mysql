@@ -1,0 +1,78 @@
+-- MySQL dump 10.16  Distrib 10.1.37-MariaDB, for Win32 (AMD64)
+--
+-- Host: localhost    Database: people
+-- ------------------------------------------------------
+-- Server version	10.1.37-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `admin` (
+  `name` varchar(255) COLLATE ucs2_croatian_ci DEFAULT NULL,
+  `password` varchar(255) COLLATE ucs2_croatian_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_croatian_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `admin`
+--
+
+LOCK TABLES `admin` WRITE;
+/*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` VALUES ('Admin','admin');
+/*!40000 ALTER TABLE `admin` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `people`
+--
+
+DROP TABLE IF EXISTS `people`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `people` (
+  `First_name` varchar(255) COLLATE ucs2_croatian_ci NOT NULL,
+  `Last_name` varchar(255) COLLATE ucs2_croatian_ci NOT NULL,
+  `Password` varchar(255) COLLATE ucs2_croatian_ci NOT NULL,
+  `Email` varchar(255) COLLATE ucs2_croatian_ci NOT NULL,
+  `Phone_Number` int(11) NOT NULL,
+  `Country` varchar(255) COLLATE ucs2_croatian_ci NOT NULL,
+  `Program` varchar(255) COLLATE ucs2_croatian_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=ucs2 COLLATE=ucs2_croatian_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `people`
+--
+
+LOCK TABLES `people` WRITE;
+/*!40000 ALTER TABLE `people` DISABLE KEYS */;
+INSERT INTO `people` VALUES ('Samra','Seline','1a1dc91c907325c69271ddf0c944bc72','samrarar@gmail.com',3232323,'',''),('Asmir','Mandzo','f8fc2478bea554f5ac7bb72facf9462e','mandza@gmail.com',40404,'Slovenia','Data engineering'),('Sica','ss','8d8d25d0904a5a895f3f88363f2213eb','gdgdg@gmail.com',43434,'Bulgaria','Data engineering'),('Sena','Mikara','f7f6604db47756ce02a585b6e42a0526','mikara@gmail.com',403403,'Bosnia and Herzegovina',''),('Jasmina','Bozinjo','f9607e75c86bebd83175ce9eb4103cc392627788','jaca@gmail.com',43040,'England','Machine learning'),('Ben','Ten','0b14e0c0b7c3e08de0e751551c2a8160','ten@gmail.com',43434,'Nikaragva','Digital marketing'),('Asmir','Asmir','5e8ceb28b190096c2795dd0fffa76d7f','asmir@gmail.com',4343434,'Nikaragva','Digital marketing'),('Semir','sema','2a4a4f5091582f911f80492d016816f4','sema@gmail.com',54545,'Bosnia and Herzegovina','Digital marketing'),('dd','dd','df3939f11965e7e75dbc046cd9af1c67','adsad@gmail.com',3434,'Nikaragva','Digital marketing'),('ENis','enis','127dfd9fe3a88dbbe62c68f5e776faa6','enis@gmail.com',3434,'Nikaragva','Digital marketing'),('Hamza','Hza','8950259507cd8ce2a99f8b94674f2b77','hza@gmail.com',3434,'Nikaragva','Digital marketing'),('Daris','Smilic','aced3598a34a561715dacfe32a328c1c','daris@gmail.com',0,'Nikaragva','Digital marketing'),('Jaca','Dz','d41d8cd98f00b204e9800998ecf8427e','dac@gmail.com',32323,'Bosnia and Herzegovina','Digital marketing'),('Hamza','Hamz','32323','ssmir@gmail.com',3232,'dssad','Digital marketing'),('Micky','Mouse','4839641470743161315c2daed44ff32c','micky@gmail.com',32323,'Nikaragva','Digital marketing'),('Haris','Habul','c0ba88b8bca79ca3b50b96abdf431766','harishans9797@gmail.com',62769650,'Bosnia and Herzegovina','Machine learning'),('Chris','Ander','f2a0ffe83ec8d44f2be4b624b0f47dde','ander@gmail.com',3434,'Bosnia and Herzegovina','Digital marketing'),('Sam','Smith','332532dcfaa1cbf61e2a266bd723612c','sam@gmail.com',323,'Nikaragva','Digital marketing'),('Samuely','Smith','9a62fd14ec641d31f53b511751e3ba1f','sam@gmail.com',5454,'Nikaragva','Digital marketing'),('Lucifer','Morningstar','cae33a0264ead2ddfbc3ea113da66790','lucy@gmail.com',666666,'Bosnia and Herzegovina','Machine learning');
+/*!40000 ALTER TABLE `people` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-06-12  1:40:33
